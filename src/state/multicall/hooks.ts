@@ -43,7 +43,6 @@ function useCallsData(calls: (Call | undefined)[], options?: ListenerOptions): C
   const { chainId } = useActiveWeb3React()
   const callResults = useSelector<AppState, AppState['multicall']['callResults']>(state => state.multicall.callResults)
   const dispatch = useDispatch<AppDispatch>()
-
   const serializedCallKeys: string = useMemo(
     () =>
       JSON.stringify(
